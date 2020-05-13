@@ -9,7 +9,16 @@ import "bootstrap";
 import "../styles/index.scss";
 
 //import your own components
-import { Home } from "./component/home.js";
+import { MyCard } from "./component/myCard";
 
 //render your react application
-ReactDOM.render(<Home />, document.querySelector("#app"));
+const cardContainer = (
+	<div className="container">
+		{MyCard()}
+		{MyCard()}
+		{MyCard()}
+		{MyCard()}
+	</div>
+);
+
+ReactDOM.render(cardContainer, document.querySelector("#app"));
